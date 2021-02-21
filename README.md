@@ -2,7 +2,7 @@
 
 ## TODO
 
-- Check for **_mongoose_** depreciation warning.
+-   Check for **_mongoose_** depreciation warning.
 
 ## Optional files to add
 
@@ -27,3 +27,11 @@ It is used to store environment variables.
 
     PORT = <Port to connect server>
     MONGODB_URI = <URL to connect MongoDB>
+
+### Modules used
+
+-   **[nodemon](https://nodemon.io/)**
+-   **[express](https://expressjs.com/)**
+-   **[mongoose](https://mongoosejs.com)**
+
+_(Other packages are mentioned in **package.json**...)_
