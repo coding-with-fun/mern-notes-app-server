@@ -2,7 +2,7 @@
 
 ## TODO
 
-    - Check for **_mongoose_** depreciation warning.
+- Check for **_mongoose_** depreciation warning.
 
 ## Optional files to add
 
