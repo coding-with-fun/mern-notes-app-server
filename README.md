@@ -30,10 +30,13 @@ It is used to store environment variables.
 
 ## Modules used
 
--   **[nodemon](https://nodemon.io/)**
--   **[express](https://expressjs.com/)**
--   **[mongoose](https://mongoosejs.com)**
--   **[uuid](https://github.com/uuidjs/uuid#readme)**
--   **[crypto](https://nodejs.org/api/crypto.html)**
+1.  **[body-parser](https://github.com/expressjs/body-parser#readme)**
+2.  **[cookie-parser](https://github.com/expressjs/cookie-parser#readme)**
+3.  **[cors](https://github.com/expressjs/cors#readme)**
+4.  **[crypto](https://nodejs.org/api/crypto.html)**
+5.  **[express](https://expressjs.com/)**
+6.  **[mongoose](https://mongoosejs.com)**
+7.  **[nodemon](https://nodemon.io/)**
+8.  **[uuid](https://github.com/uuidjs/uuid#readme)**
 
 _(Other packages are mentioned in **package.json**...)_

@@ -1,26 +1,66 @@
-// *Package dependencies
+/**
+ *  --------------------
+ *  Package dependencies
+ *  --------------------
+ */
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
 const express = require('express');
 require('colors');
 require('dotenv').config();
 
-// *Internal dependencies
+/**
+ *  ---------------------
+ *  Internal dependencies
+ *  ---------------------
+ */
 const connectDB = require('./config/db');
 
-// *Defining constants
+/**
+ *  ------------------
+ *  Defining constants
+ *  ------------------
+ */
 const PORT = process.env.PORT || 5000;
 
-// *Initialize Express Server
+/**
+ *  -------------------------
+ *  Initialize Express Server
+ *  -------------------------
+ */
 const app = express();
 
-// *Defining Port
+/**
+ *  ----------------------
+ *  Configuring middleware
+ *  ----------------------
+ */
+app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(cors());
+
+/**
+ *  ------------------------
+ *  Defining Port Connection
+ *  ------------------------
+ */
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}...`.green);
 });
 
-// *Connect to MongoDB
+/**
+ *  ------------------
+ *  Connect to MongoDB
+ *  ------------------
+ */
 connectDB();
 
-// *Defining Routes
+/**
+ *  ---------------
+ *  Defining Routes
+ *  ---------------
+ */
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
