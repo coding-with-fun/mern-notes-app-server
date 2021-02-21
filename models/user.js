@@ -56,8 +56,8 @@ UserSchema.virtual('password')
         return this._password;
     });
 
-UserSchema.method = {
-    // *Authenticate the plain and hashed password
+UserSchema.methods = {
+    // *Authenticate user with the plain password
     authenticate: function (plainPassword) {
         return this.securedPassword(plainPassword) === this.encryptedPassword;
     },
