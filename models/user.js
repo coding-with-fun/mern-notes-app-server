@@ -3,40 +3,48 @@ import { v4 as uuidv4 } from 'uuid';
 const crypto = require('crypto');
 const mongoose = require('mongoose');
 
+const { ObjectId } = mongoose.Schema;
+
 const UserSchema = mongoose.Schema(
     {
         name: {
             type: String,
             trim: true,
-            require: true,
+            required: true,
         },
 
         userName: {
             type: String,
             trim: true,
-            require: true,
+            required: true,
             unique: true,
         },
 
         encryptedPassword: {
             type: String,
             trim: true,
-            require: true,
+            required: true,
         }, // Encrypted Password
 
         salt: String,
 
-        todoList: {
-            type: Array,
-            default: [],
-        },
+        todoList: [
+            {
+                type: ObjectId,
+                ref: 'TODO',
+                required: true,
+            },
+        ],
 
-        notesList: {
-            type: Array,
-            default: [],
-        },
+        notesList: [
+            {
+                type: ObjectId,
+                ref: 'Note',
+                required: true,
+            },
+        ],
     },
-    { timestamp }
+    { timestamp: true }
 );
 
 UserSchema.virtual('password')
