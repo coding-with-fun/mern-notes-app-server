@@ -1,8 +1,7 @@
 const express = require('express');
+const { home } = require('../controllers/auth');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send('Successful');
-});
+router.get('/', home);
 
 module.exports = router;
