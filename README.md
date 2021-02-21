@@ -28,10 +28,12 @@ It is used to store environment variables.
     PORT = <Port to connect server>
     MONGODB_URI = <URL to connect MongoDB>
 
-### Modules used
+## Modules used
 
 -   **[nodemon](https://nodemon.io/)**
 -   **[express](https://expressjs.com/)**
 -   **[mongoose](https://mongoosejs.com)**
+-   **[uuid](https://github.com/uuidjs/uuid#readme)**
+-   **[crypto](https://nodejs.org/api/crypto.html)**
 
 _(Other packages are mentioned in **package.json**...)_
