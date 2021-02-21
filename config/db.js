@@ -1,6 +1,5 @@
-// TODO Check for error for mongoose error
+// TODO Check for mongoose error
 const mongoose = require('mongoose');
-
 require('colors');
 require('dotenv').config();
 

@@ -1,7 +1,6 @@
-import { v4 as uuidv4 } from 'uuid';
-
 const crypto = require('crypto');
 const mongoose = require('mongoose');
+const uuidv4 = require('uuid/v4');
 
 const { ObjectId } = mongoose.Schema;
 
