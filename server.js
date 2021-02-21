@@ -16,6 +16,7 @@ require('dotenv').config();
  *  ---------------------
  */
 const connectDB = require('./config/db');
+const indexRouters = require('./routes/router');
 
 /**
  *  ------------------
@@ -61,6 +62,4 @@ connectDB();
  *  Defining Routes
  *  ---------------
  */
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+app.use('/api', indexRouters);
